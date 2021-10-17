@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Header = (props) => (
-    <h1>{ props.title }</h1>
+    <h3>{ props.title }</h3>
 )
 
 const Part = (props) => (
@@ -13,11 +13,12 @@ const Content = ({parts}) =>{
 }
 
 const Summa = ({parts}) => {
-    const summa = parts.reduce((sum,part)=>sum+=part.exercises,0)
+    const summa = parts.reduce((sum,part) => sum+=part.exercises,0)
     return (<div>
         <p><b>total of {summa} exercises</b></p>
     </div>)
 }
+
 
 const Course = ({course}) => (
     <div>
