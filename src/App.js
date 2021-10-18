@@ -1,8 +1,8 @@
 import React from 'react'
 import Course from './components/Course'
 
-const App = function () {
-	const courses = [
+function App () {
+  const courses = [
     {
       name: 'Half Stack application development',
       id: 1,
@@ -47,18 +47,22 @@ const App = function () {
     }
   ]
       
-  const Sisältö = ({courses}) => {
-  	return (
-			 courses.map((course)=><Course key={course.id} course={course} />)
-	  )
-  }
+//   const Sisältö = function ({courses}) {
+// 	return (
+//        courses.map((course)=><Course key={course.id} course={course} />)
+//     )
+// }
 
-  	return (
-		<div>
-			<h1>Web Development Curriculum</h1>
-			<Sisältö courses = {courses} />
-		</div>
-	)
+
+    return (
+    <div>
+      <h1>Web development curriculum</h1>
+      {/* <Sisältö courses = {courses} /> */}
+      {courses.map(course => (
+        <Course key={course.id} course={course} />
+      ))}
+    </div>
+  )
 }
 
 
